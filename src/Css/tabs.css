@@ -1,182 +1,141 @@
-/* Default tab style */
+
+
+.design-process-content img {
+    position: absolute;
+   
+    
+    bottom: 0;
+    z-index: 0;
+    max-height: 100%;
+}
+.design-process-content h3 {
+    margin-bottom: 16px;
+}
+.design-process-content p {
+    line-height: 26px;
+    margin-bottom: 12px;
+}
+.process-model {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto 26px;
+    border: none;
+    z-index: 0;
+}
+.process-model li::after {
+    background: #e5e5e5 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    margin: 0 auto;
+    position: absolute;
+    right: -30px;
+    top: 33px;
+    width: 85%;
+    z-index: -1;
+}
+.process-model li.visited::after {
+    background: #57b87b;
+}
+.process-model li:last-child::after {
+    width: 0;
+}
+.process-model li {
+    display: inline-block;
+    width: 18%;
+    text-align: center;
+    float: none;
+}
+.nav-tabs.process-model > li.active > a, .nav-tabs.process-model > li.active > a:hover, .nav-tabs.process-model > li.active > a:focus, .process-model li a:hover, .process-model li a:focus {
+    border: none;
+    background: transparent;
+
+}
+.process-model li a {
+    padding: 0;
+    border: none;
+    color: #606060;
+}
+.process-model li.active,
+.process-model li.visited {
+    color: #57b87b;
+}
+.process-model li.active a,
+.process-model li.active a:hover,
+.process-model li.active a:focus,
+.process-model li.visited a,
+.process-model li.visited a:hover,
+.process-model li.visited a:focus {
+    color: #57b87b;
+}
+.process-model li.active p,
+.process-model li.visited p {
+    font-weight: 600;
+}
+.process-model li i {
+    display: block;
+    height: 68px;
+    width: 68px;
+    text-align: center;
+    margin: 0 auto;
+    background: #f5f6f7;
+    border: 2px solid #e5e5e5;
+    line-height: 65px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+.process-model li.active i, .process-model li.visited i  {
+    background: #fff;
+    border-color: #57b87b;
+}
+.process-model li p {
+    font-size: 14px;
+    margin-top: 11px;
+}
+.process-model.contact-us-tab li.visited a, .process-model.contact-us-tab li.visited p {
+    color: #606060!important;
+    font-weight: normal
+}
+.process-model.contact-us-tab li::after  {
+    display: none; 
+}
+.process-model.contact-us-tab li.visited i {
+    border-color: #e5e5e5; 
+}
 
 
 
-.tabs {
-	position: relative;
-	overflow: hidden;
-	margin: 0 auto;
-	width: 100%;
-	font-weight: 300;
-	font-size: 1.25em;
+@media screen and (max-width: 560px) {
+  .more-icon-preocess.process-model li span {
+        font-size: 23px;
+        height: 50px;
+        line-height: 46px;
+        width: 50px;
+    }
+    .more-icon-preocess.process-model li::after {
+        top: 24px;
+    }
 }
-
-/* Nav */
-.tabs nav {
-	text-align: center;
-}
-
-.tabs nav ul {
-	position: relative;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: flex;
-	margin: 0 auto;
-	padding: 0;
-	max-width: 1200px;
-	list-style: none;
-	-ms-box-orient: horizontal;
-	-ms-box-pack: center;
-	-webkit-flex-flow: row wrap;
-	-moz-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-justify-content: center;
-	-moz-justify-content: center;
-	-ms-justify-content: center;
-	justify-content: center;
-}
-
-.tabs nav ul li {
-	position: relative;
-	z-index: 1;
-	display: block;
-	margin: 0;
-	text-align: center;
-	-webkit-flex: 1;
-	-moz-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-}
-
-.tabs nav a {
-	position: relative;
-	display: block;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	line-height: 2.5;
-}
-
-.tabs nav a span {
-	vertical-align: middle;
-	font-size: 0.75em;
-}
-
-.tabs nav li.tab-current a {
-	color: #74777b;
-}
-
-.tabs nav a:focus {
-	outline: none;
-}
-
-/* Icons */
-.icon::before {
-	z-index: 10;
-	display: inline-block;
-	margin: 0 0.4em 0 0;
-	vertical-align: middle;
-	text-transform: none;
-	font-weight: normal;
-	font-variant: normal;
-	font-size: 1.3em;
-	font-family: 'stroke7pixeden';
-	line-height: 1;
-	speak: none;
-	-webkit-backface-visibility: hidden;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-.icon-upload::before {
-	content: "\e68a";
-}
-.icon-tools::before {
-	content: "\e60a";
-}
-.icon-plane::before {
-	content: "\e625";
-}
-.icon-joy::before {
-	content: "\e6a4";
-}
-.icon-plug::before {
-	content: "\e69a";
-}
-.icon-home::before {
-	content: "\e648";
-}
-.icon-gift::before {
-	content: "\e652";
-}
-.icon-display::before {
-	content: "\e65e";
-}
-.icon-date::before {
-	content: "\e660";
-}
-.icon-config::before {
-	content: "\e666";
-}
-.icon-coffee::before {
-	content: "\e669";
-}
-.icon-camera::before {
-	content: "\e66f";
-}
-.icon-box::before {
-	content: "\e674";
-}
-
-/* Content */
-.content-wrap {
-	position: relative;
-}
-
-.content-wrap section {
-	display: none;
-	margin: 0 auto;
-	padding: 1em;
-	max-width: 1200px;
-	text-align: center;
-}
-
-.content-wrap section.content-current {
-	display: block;
-}
-
-.content-wrap section p {
-	margin: 0;
-	padding: 0.75em 0;
-	color: rgba(40,44,42,0.05);
-	font-weight: 900;
-	font-size: 4em;
-	line-height: 1;
-}
-
-/* Fallback */
-.no-js .content-wrap section {
-	display: block;
-	padding-bottom: 2em;
-	border-bottom: 1px solid rgba(255,255,255,0.6);
-}
-
-.no-flexbox nav ul {
-	display: block;
-}
-
-.no-flexbox nav ul li {
-	min-width: 15%;
-	display: inline-block;
-}
-
-@media screen and (max-width: 58em) {
-	.tabs nav a.icon span {
-		display: none;
-	}
-	.tabs nav a:before {
-		margin-right: 0;
-	}
+@media screen and (max-width: 380px) { 
+    .process-model.more-icon-preocess li {
+        width: 16%;
+    }
+    .more-icon-preocess.process-model li span {
+        font-size: 16px;
+        height: 35px;
+        line-height: 32px;
+        width: 35px;
+    }
+    .more-icon-preocess.process-model li p {
+        font-size: 8px;
+    }
+    .more-icon-preocess.process-model li::after {
+        top: 18px;
+    }
+    .process-model.more-icon-preocess {
+        text-align: center;
+    }
 }

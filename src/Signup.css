@@ -1,0 +1,348 @@
+form {
+  width: 300px;
+  margin: 20px auto;
+}
+
+fieldset {
+  position: relative;
+  border: none;  
+}
+
+label {
+  position: absolute;  
+  top: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+
+input:focus ~ label {
+  color: red;  
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: 0;
+  transform: scale(0.6, 0.6);
+}
+
+input {
+  font-size: 20px;  
+  width: 100%;
+  border: none;  
+  margin-top: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.after {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, red 50%, transparent 50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: all 0.6s ease;
+}
+
+input:focus ~ .after {
+background-position: 0 0;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    max-width: 100%; /* Full width */
+    max-height: 100%;/* Full height */
+    overflow: inherit; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0px;
+    border: 1px solid #888;
+    width: 25%;
+	/* height: 500px; */
+	border-radius: none;
+	/* overflow: unset;  */
+	
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.submit {
+    background-color: #2697F5;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: -4px 76px;
+    cursor: pointer;
+	box-shadow: 8px 10px 14px #ccc;
+			-moz-box-shadow: 8px 10px 14px #ccc;
+			-webkit-box-shadow: 8px 10px 14px gray;
+			-khtml-box-shadow: 8px 10px 14px #ccc;
+}
+
+.submit1 {
+    background-color: #2697F5;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px -90px;
+    cursor: pointer;
+	box-shadow: 8px 10px 14px #ccc;
+			-moz-box-shadow: 8px 10px 14px #ccc;
+			-webkit-box-shadow: 8px 10px 14px gray;
+			-khtml-box-shadow: 8px 10px 14px #ccc;
+}
+/* Popup */
+
+/* Sign in up */
+@import url("https://fonts.googleapis.com/css?family=Nunito:300");
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 20px;
+  font-family: 'Nunito', sans-serif;
+  color: #fefefe;
+  background: #fefefe;
+}
+.img1{
+width: 309px; 
+height: 200px; 
+margin-left: -37px; 
+margin-top: -50px;
+box-shadow: 8px 10px 14px #ccc;
+			-moz-box-shadow: 8px 10px 14px #ccc;
+			-webkit-box-shadow: 8px 10px 14px gray;
+			-khtml-box-shadow: 8px 10px 14px #ccc;
+
+}
+.img2{
+width: 309px;  
+height: 200px; 
+margin-left: 63px; 
+margin-top: -50px;
+box-shadow: 8px 10px 14px #ccc;
+			-moz-box-shadow: 8px 10px 14px #ccc;
+			-webkit-box-shadow: 8px 10px 14px gray;
+			-khtml-box-shadow: 8px 10px 14px #ccc;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 400px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.section {
+  padding: 0rem;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+}
+.header__text {
+  position: relative;
+  padding: 3.5rem 0 7rem;
+}
+.header__text > h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+.header > .trapezoid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: skewY(-10deg);
+  transform-origin: top left;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background: linear-gradient(rgba(17, 38, 190, 0.8), rgba(17, 38, 190, 0.8)), url("https://images.pexels.com/photos/520936/pexels-photo-520936.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+form {
+  margin: 24px auto;
+    max-width: 26rem;
+    /* 	overflow: auto; */
+    
+}
+form > * + * {
+  margin-top: 1rem;
+}
+form > input {
+  border: 0;
+  border-bottom: 1px solid #1126be;
+  border-radius: 0;
+  width: 100%;
+  height: 3rem;
+  padding: 0 0 0.25rem 0;
+  font-size: 1.4rem;
+  color: #1126be;
+  background: #fefefe;
+}
+form > input:focus {
+  outline: none;
+}
+form > input::placeholder {
+  color: #1126be;
+}
+form > button {
+  margin-top: 2rem;
+  border: 0;
+  border-radius: 0px;
+  width: 50%;
+  padding: 0.85rem;
+  font-size: 1rem;
+  color: #fefefe;
+  background: #2697F5;
+  
+}
+form > button:focus {
+  outline: none;
+}
+form > p {
+  margin: 0.25rem 0 0;
+  text-align: center;
+  color: #1126be;
+}
+
+.sign-up {
+  display: none;
+}
+
+.opposite-btn1 {
+  cursor: pointer;
+  color: black;
+  margin-left: 53px;
+}
+
+.opposite-btn2 {
+  cursor: pointer;
+  color: black;
+  margin-left: -53px;
+}
+.opposite-btn1{
+    margin: 57px 79px 27px;
+    width: 72px;
+}
+/* Sign in up */
+
+/* Social media  */
+.fa {
+  padding: 1px;
+  font-size: 20px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 2px;
+  border-radius: 50%;
+}
+
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+/* Social media  */
+
+/* Form text boxes */
+form {
+  width: 300px;
+  margin: 20px auto;
+}
+
+fieldset {
+  position: relative;
+  border: none;  
+}
+
+label {
+  position: absolute;  
+  top: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+
+input:focus ~ label {
+  color: red;  
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: 0;
+  transform: scale(0.6, 0.6);
+}
+
+input {
+  font-size: 20px;  
+  width: 100%;
+  border: none;  
+  margin-top: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.after {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, red 50%, transparent 50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: all 0.6s ease;
+}
+
+input:focus ~ .after {
+background-position: 0 0;
+}
